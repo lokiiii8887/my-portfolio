@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>K. Lokesh Portfolio</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', cursive;
+            background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+            color: #00FFFF;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: blue;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        .cursor {
+            display: inline-block;
+            color: #1abc9c;
+            animation: blink 0.7s infinite;
+            font-weight: bold;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        nav {
+            background-color: #1abc9c;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            gap: 25px;
+        }
+
+        nav a {
+            color: gold;
+            text-decoration: underline;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        section {
+            background: purple;
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 850px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1a5276;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        img.profile {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+            border: 3px solid #1abc9c;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: pink;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a.button:hover {
+            background: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span id="typed-name"></span><span class="cursor">|</span></h1>
+    <p>Web Developer | Student | Freelancer</p>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="lokepic.jpg" alt="K Lokesh" class="profile">
+    <p>Hello! I'm K. Lokesh, a passionate web developer and student with a strong interest in front-end technologies, data science, and creative design. I love building clean, user-friendly websites and learning new skills.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Python and R for Data Science</li>
+        <li>Responsive Web Design</li>
+        <li>Git & GitHub</li>
+        <li>Basic SQL & MySQL</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>Designed and developed a responsive online portfolio using HTML and CSS.</p>
+    </div>
+
+    <div class="project">
+        <h3>Data Visualization with R</h3>
+        <p>Created visualizations using ggplot2 for analyzing trends in student performance data.</p>
+    </div>
+
+    <div class="project">
+        <h3>Mini Project - GDP Prediction</h3>
+        <p>Predicted future GDP of countries using Python and COVID-19 data analysis (cleaning, retrieving, plotting).</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+        <p><strong>Email:</strong> lokeshloke44822@gmail.com</p>
+        <p><strong>Phone:</strong> +91 8056579011</p>
+        <p><strong>Location:</strong> Chittoor, Andhra Pradesh, India</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 K. Lokesh. All rights reserved.</p>
+</footer>
+
+<!-- Typing Animation Script -->
+<script>
+    const text = "K. Lokesh";
+    const speed = 150;
+    const eraseSpeed = 80;
+    const delayBetweenLoops = 1000;
+    let index = 0;
+    let typing = true;
+
+    function typeLoop() {
+        const nameElement = document.getElementById("typed-name");
+
+        if (typing) {
+            if (index < text.length) {
+                nameElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeLoop, speed);
+            } else {
+                typing = false;
+                setTimeout(typeLoop, delayBetweenLoops);
+            }
+        } else {
+            if (index > 0) {
+                nameElement.textContent = text.substring(0, index - 1);
+                index--;
+                setTimeout(typeLoop, eraseSpeed);
+            } else {
+                typing = true;
+                setTimeout(typeLoop, delayBetweenLoops);
+            }
+        }
+    }
+
+    window.onload = typeLoop;
+</script>
+
+</body>
+</html>

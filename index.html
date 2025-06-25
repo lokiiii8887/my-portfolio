@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K. Lokesh Portfolio</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -13,15 +14,15 @@
         }
 
         body {
-            font-family: 'Poppins', cursive;
-            background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+            font-family: 'red serifs';
+            background: linear-gradient(to right, #f9f9f9, #e6f7ff);
             color: #00FFFF;
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(to right, #2c3e50, #34495e);
-            color: blue;
+            background: linear-gradient(to right, #2c5e50, #37495e);
+            color: dark storm;
             padding: 40px 0;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -35,17 +36,17 @@
         .cursor {
             display: inline-block;
             color: #1abc9c;
-            animation: blink 0.7s infinite;
+            animation: blink 0.5s infinite;
             font-weight: bold;
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
+            0%, 100% { opacity: 0; }
             50% { opacity: 0; }
         }
 
         nav {
-            background-color: #1abc9c;
+            background-color: #0fff0f;
             display: flex;
             justify-content: center;
             padding: 12px 0;
@@ -53,7 +54,7 @@
         }
 
         nav a {
-            color: gold;
+            color: vi; 
             text-decoration: underline;
             font-weight: bold;
             padding: 8px 16px;
@@ -66,7 +67,7 @@
         }
 
         section {
-            background: purple;
+            background: black;
             margin: 30px auto;
             padding: 30px;
             max-width: 850px;
@@ -74,10 +75,25 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        h2 {
+        card {
+            background:sky blue;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+      
+          }
+
+        h2 { 
+           border-bottom:2px solid #444;
+          padding-bottom: 3px;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+          {   
             color: #1a5276;
             margin-bottom: 15px;
-            font-size: 26px;
+            font-size: 22px;
         }
 
         ul {
@@ -85,8 +101,8 @@
         }
 
         img.profile {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 50%;
             display: block;
@@ -98,6 +114,22 @@
             margin-bottom: 20px;
         }
 
+         .btn {
+            background-color: #fff00f;
+            color: orange;
+            padding: 10px 20px;
+            text-decoration: green wavy underline;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+           
+          }  
+
+         .btn:hover {
+             background-color: #16a085;
+         }  
+
         footer {
             background-color: #2c3e50;
             color: pink;
@@ -108,14 +140,14 @@
         }
 
         .contact-info p {
-            margin: 5px 0;
+            margin: 10px 0;
         }
 
         a.button {
             display: inline-block;
             margin-top: 20px;
             background: #1abc9c;
-            color: white;
+            color: grey;
             padding: 10px 20px;
             border-radius: 8px;
             text-decoration: none;
@@ -132,7 +164,7 @@
 
 <header>
     <h1><span id="typed-name"></span><span class="cursor">|</span></h1>
-    <p>Web Developer | Student | Freelancer</p>
+    <p> 🚀Web Developer |🧠Student |🌐Freelancer | 📊 Data science</p> 
 </header>
 
 <nav>
@@ -145,21 +177,25 @@
 <section id="about">
     <h2>About Me</h2>
     <img src="lokepic.jpg" alt="K Lokesh" class="profile">
-    <p>Hello! I'm K. Lokesh, a passionate web developer and student with a strong interest in front-end technologies, data science, and creative design. I love building clean, user-friendly websites and learning new skills.</p>
+    <p>Hello! I'm K. Lokesh, a passionate web developer and student with a strong interest in front-end technologies, data science, and creative design.
+    I love building clean, user-friendly websites and learning new skills.</p>
+  <a href="resume.pdf" class="btn" download>📄 DownloadResume</a>
+  
 </section>
 
-<section id="skills">
+<section id="skills" class="card">
     <h2>Skills</h2>
     <ul>
-        <li>HTML5, CSS3, JavaScript</li>
-        <li>Python and R for Data Science</li>
-        <li>Responsive Web Design</li>
-        <li>Git & GitHub</li>
-        <li>Basic SQL & MySQL</li>
+        <li>💻HTML,CSS, JavaScript</li>
+        <li>🛠Python and R for Data Science</li>
+        <li>📊Data Visualization: ggplot2, matplotlib</li>
+        <li>🧠Responsive Web Design</li>
+        <li>🌐Git & GitHub</li>
+
     </ul>
 </section>
 
-<section id="projects">
+<section id="projects" class="card">
     <h2>Projects</h2>
 
     <div class="project">
@@ -169,31 +205,39 @@
 
     <div class="project">
         <h3>Data Visualization with R</h3>
-        <p>Created visualizations using ggplot2 for analyzing trends in student performance data.</p>
+        <p>Created visualizations using ggplot2 for analyzing trends in student performance data.
+        and used r for the project covid-19 data analysis
+        (cleaning, retrieving, plotting, visualizing).</p>
     </div>
 
     <div class="project">
         <h3>Mini Project - GDP Prediction</h3>
-        <p>Predicted future GDP of countries using Python and COVID-19 data analysis (cleaning, retrieving, plotting).</p>
+        <p>Predicted future GDP of countries using Python </p>
     </div>
 
     <div class="project">
         <h3>Mini Project -delivery delay report</h3>
         <p>Built a delivery delay analysis system using python and pandas. Grouped and visualized city-wise average 
-            delays with matplotlib.Exported final reports to CSV and PNG<</p>
+        delays with matplotlib.Exported final reports to CSV and PNG.</p>
+    </div> 
+
+   <p><a href="https://github.com/lokiiii8887" class="btn" target="_blank">🔗 Visit My GitHub</a></p 
+        
 </section>
 
-<section id="contact">
+<section id="contact" class="card">
     <h2>Contact</h2>
     <div class="contact-info">
         <p><strong>Email:</strong> lokeshloke44822@gmail.com</p>
         <p><strong>Phone:</strong> +91 8056579011</p>
         <p><strong>Location:</strong> Chittoor, Andhra Pradesh, India</p>
     </div>
+     <p>Want to collaborate, hire me, or just say hi?</p>
+    <a href="mailto:lokeshloke8887@gmail.com" class="btn">📬 Email Me</a>
 </section>
 
 <footer>
-    <p>&copy; 2025 K. Lokesh. All rights reserved.</p>
+    <p>.© 2025 K. Lokesh Built with ❤ and vision.</p>
 </footer>
 
 <!-- Typing Animation Script -->
@@ -201,7 +245,7 @@
     const text = "K. Lokesh";
     const speed = 150;
     const eraseSpeed = 80;
-    const delayBetweenLoops = 1000;
+    const delayBetweenLoops = 1500;
     let index = 0;
     let typing = true;
 
